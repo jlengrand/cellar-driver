@@ -10,7 +10,6 @@ program: Dht11Driver.c
 	gcc -Wall $(INCLUDES) $(HEADERS) $(FILES) -o $(OUT)
 
 library:
-
 	gcc -shared -fPIC -o $(OUT).so $(INCLUDES) $(FILES)
 
 copy:
