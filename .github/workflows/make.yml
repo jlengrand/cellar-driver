@@ -25,4 +25,4 @@ jobs:
       with:
         java-version: 11
     - name: Make
-      run: cd src/main/c; make
+      run: cd src/main/c; ./compile_arm.sh
