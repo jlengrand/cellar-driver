@@ -4,7 +4,7 @@ HEADERS = ../../../target/headers/nl_lengrand_cellar_Dht11Driver.h adafruit/comm
 FILES = adafruit/common_dht_read.c adafruit/Raspberry_Pi_2/pi_2_mmio.c adafruit/Raspberry_Pi_2/pi_2_dht_read.c Dht11Driver.c
 OUT = libdht11
 
-default: library move
+default: library copy
 
 program: Dht11Driver.c
 	gcc -Wall $(INCLUDES) $(HEADERS) $(FILES) -o $(OUT)
@@ -13,7 +13,7 @@ library:
 
 	gcc -shared -fPIC -o $(OUT).so $(INCLUDES) $(FILES)
 
-move:
+copy:
 	-cp $(OUT).so ../resources/libs/raspberry/
 
 clean:
