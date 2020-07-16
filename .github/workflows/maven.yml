@@ -29,7 +29,7 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
     - name: package
-      run: mkdir staging && cp target/*.jar staging && cp src/main/resources/* staging
+      run: mkdir staging && cp target/*.jar staging && cp src/main/resources/libdht11.so staging
     - uses: actions/upload-artifact@v1
       with:
         name: Package
