@@ -25,8 +25,13 @@ jobs:
       run: |
         export LD_LIBRARY_PATH=/home/runner/work/cellar-driver/cellar-driver/cross-pi-gcc-8.3.0-1/lib:$LD_LIBRARY_PATH
         export PATH=/home/runner/work/cellar-driver/cellar-driver/cross-pi-gcc-8.3.0-1/bin:$PATH;
+        echo "-------"
         echo $PATH;
+        echo "-------"
         echo $LD_LIBRARY_PATH;
+        echo "-------"
+        ls /home/runner/work/cellar-driver/cellar-driver/cross-pi-gcc-8.3.0-1/bin
+        echo "-------"
         cd src/main/c;
         ./compile_arm.sh
 
