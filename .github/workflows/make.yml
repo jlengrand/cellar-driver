@@ -30,8 +30,6 @@ jobs:
         echo "-------"
         echo $LD_LIBRARY_PATH;
         echo "-------"
-        ls /home/runner/work/cross-pi-gcc-8.3.0-1/bin
-        echo "-------"
         ls /home/runner/work/
         echo "-------"
 
