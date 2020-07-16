@@ -1,6 +1,5 @@
 package nl.lengrand.cellar;
 
-import nl.lengrand.cellar.Dht11Driver;
 
 import java.util.concurrent.ExecutionException;
 

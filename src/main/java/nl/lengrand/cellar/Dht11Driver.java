@@ -1,9 +1,17 @@
 package nl.lengrand.cellar;
 
+import nl.lengrand.cellar.utils.NativeUtils;
+
+import java.io.IOException;
+
 public class Dht11Driver {
 
     static {
-        System.loadLibrary("dht11");
+        try {
+            NativeUtils.loadLibraryFromJar("/libs/raspberry/libdht11.so");
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
     }
 
     public native void sayHello();
