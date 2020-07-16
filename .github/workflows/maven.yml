@@ -27,7 +27,7 @@ jobs:
       with:
         java-version: 11
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn clean install
     - name: package
       run: mkdir staging && cp target/*.jar staging && cp src/main/resources/libs/raspberry/* staging
     - uses: actions/upload-artifact@v1
