@@ -14,7 +14,7 @@ library:
 	gcc -shared -fPIC -o $(OUT).so $(INCLUDES) $(FILES)
 
 copy:
-	-cp $(OUT).so ../resources/
+	-cp $(OUT).so ../resources/libs/raspberry/
 
 clean:
 	-rm -f $(OUT).so

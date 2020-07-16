@@ -27,9 +27,9 @@ jobs:
       with:
         java-version: 11
     - name: Build with Maven
-      run: mvn clean install
+      run: mvn clean install; mvn clean install
     - name: package
-      run: mkdir staging && cp target/*.jar staging && cp src/main/resources/libdht11.so staging
+      run: mkdir staging && cp target/*.jar staging && cp src/main/resources/libs/raspberry/* staging
     - uses: actions/upload-artifact@v1
       with:
         name: Package

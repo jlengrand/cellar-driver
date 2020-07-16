@@ -14,14 +14,6 @@
     </properties>
 
     <build>
-         <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>libdht11.so</include>
-                </includes>
-            </resource>
-        </resources>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -46,6 +38,27 @@
                         <configuration>
                             <workingDirectory>${project.basedir}/src/main/c</workingDirectory>
                             <executable>make</executable>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/target/classes/libs/raspberry</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources/libs/raspberry</directory>
+                                </resource>
+                            </resources>
                         </configuration>
                     </execution>
                 </executions>
