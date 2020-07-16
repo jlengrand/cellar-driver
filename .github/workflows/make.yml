@@ -30,8 +30,12 @@ jobs:
         echo "-------"
         echo $LD_LIBRARY_PATH;
         echo "-------"
-        ls /home/runner/work/cellar-driver/cross-pi-gcc-8.3.0-1/bin
+        ls /home/runner/work/cross-pi-gcc-8.3.0-1/bin
         echo "-------"
+        ls /home/runner/work/
+        echo "-------"
+
+
         cd src/main/c;
         ./compile_arm.sh
 
