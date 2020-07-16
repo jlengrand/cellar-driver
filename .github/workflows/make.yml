@@ -30,7 +30,7 @@ jobs:
         echo "-------"
         echo $LD_LIBRARY_PATH;
         echo "-------"
-        ls /home/runner/work/
+        ls /home/runner/work/cellar-driver
         echo "-------"
 
 
