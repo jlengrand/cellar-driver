@@ -18,7 +18,7 @@
             <resource>
                 <directory>src/main/resources</directory>
                 <includes>
-                    <include>**/**</include>
+                    <include>libdht11.so</include>
                 </includes>
             </resource>
         </resources>
