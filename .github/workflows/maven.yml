@@ -28,12 +28,14 @@ jobs:
         echo "-------"
         echo $JAVA_HOME
         echo "-------"
-        mvn -B deploy
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        mvn clean install
     - name: package
       run: mkdir staging && cp target/*.jar staging && cp src/main/resources/libs/raspberry/* staging
     - uses: actions/upload-artifact@v1
       with:
         name: Package
         path: staging
+    - name: Publish package
+      run: mvn -B deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
