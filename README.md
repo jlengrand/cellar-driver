@@ -18,6 +18,10 @@ I'll most likely write more about it soon but in short this thing :
 
 This artifact will be used as part of the larger [Cellar](https://github.com/jlengrand/cellar) project.
 
+## Notes
+
+To use this package in cellar, follow [this doc](https://docs.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-apache-maven-for-use-with-github-packages#authenticating-to-github-packages).
+
 ## Acknowledgments 
 
 * [abhiTronix and its excellent cross compilers](https://github.com/abhiTronix/raspberry-pi-cross-compilers/wiki/Cross-Compiler:-Installation-Instructions#c-extracting-and-linking-binary)
