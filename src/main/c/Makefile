@@ -7,10 +7,10 @@ OUT = libdht11
 default: library copy
 
 program: Dht11Driver.c
-	gcc -Wall $(INCLUDES) $(HEADERS) $(FILES) -o $(OUT)
+	arm-linux-gnueabihf-gcc -Wall $(INCLUDES) $(HEADERS) $(FILES) -o $(OUT)
 
 library:
-	gcc -shared -fPIC -o $(OUT).so $(INCLUDES) $(FILES)
+	arm-linux-gnueabihf-gcc -shared -fPIC -o $(OUT).so $(INCLUDES) $(FILES)
 
 copy:
 	-cp $(OUT).so ../resources/libs/raspberry/
